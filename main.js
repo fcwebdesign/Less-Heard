@@ -376,6 +376,9 @@
       "without allies, credit, and sponsorship, some voices stay below the line.",
     ];
     const introStoryLines = [
+      "this piece is about gender equity in tech.",
+      "women and gender minorities are often present before they are equally recognized.",
+      "without allies, credit, and sponsorship, some voices stay below the line.",
       "guided path: speak -> listen -> connect -> amplify -> echo",
       "type: speak",
     ];
