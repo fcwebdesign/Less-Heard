@@ -1,32 +1,34 @@
 # Less Heard
 
-Interactive frontend piece about gender equity in tech, visibility, and collective support.
+Interactive frontend piece about gender equity in tech — built for the [WeCoded Challenge 2026](https://dev.to/challenges/wecoded-2026) on DEV.to.
+
+🔗 **Live demo:** https://fcwebdesign.github.io/Less-Heard/
+
+## Concept
+
+A terminal-based interactive experience. Type `help` to start, then follow the guided path: `speak → listen → connect → amplify → echo`.
+
+The piece explores how voices from women and gender minorities in tech are often present before they are equally heard — and what it takes to change that.
 
 ## Files
 
-- `preview.html`
-- `model.glb`
+- `index.html` — markup
+- `style.css` — styles
+- `main.js` — interaction & Three.js face rendering
+- `model.glb` — 3D face model
 
-## Publish
+## Stack
 
-This project is static. You do not need Node.js on the final host.
+Vanilla HTML/CSS/JS + [Three.js](https://threejs.org/). No build step, no dependencies to install.
 
-You only need a static web host such as:
+## Run locally
 
-- GitHub Pages
-- Netlify
-- Vercel
+Any static server works:
 
-For GitHub Pages, the direct URL will be:
+```bash
+npx serve .
+# or
+python3 -m http.server
+```
 
-`https://fcwebdesign.github.io/Less-Heard/preview.html`
-
-## DEV article
-
-You can link the live page directly in your DEV article, or try:
-
-`{% embed https://fcwebdesign.github.io/Less-Heard/preview.html %}`
-
-If DEV does not render the live page as an interactive embed, use the live link in the article body and also embed the repo:
-
-`{% embed https://github.com/fcwebdesign/Less-Heard %}`
+Then open `http://localhost:3000` (or whichever port).
