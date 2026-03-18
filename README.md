@@ -4,6 +4,8 @@ Interactive frontend piece about gender equity in tech — built for the [WeCode
 
 🔗 **Live demo:** https://fcwebdesign.github.io/Less-Heard/
 
+![Less Heard — echo stage](assets/less-heard.jpg)
+
 ## Concept
 
 A terminal-based interactive experience. Type `help` to start, then follow the guided path: `speak → listen → connect → amplify → echo`.
