@@ -224,6 +224,14 @@
       color:var(--fg);
     }
 
+    mark.cmd{
+      background:transparent;
+      color:var(--fg);
+      border:1px solid rgba(57,255,111,.3);
+      padding:1px 7px;
+      font-style:normal;
+    }
+
     .story-line.typing::after{
       content:"_";
       display:inline-block;

@@ -544,10 +544,24 @@
         queueStoryTimer(() => {
           if (runId !== storyRunId) return;
           line.style.opacity = "1";
-          typeStoryLine(runId, line, text, index === 0 ? 16 : 11);
+          if (actionClass) {
+            const colonIdx = text.indexOf(": ");
+            if (colonIdx !== -1) {
+              const prefix = text.slice(0, colonIdx + 2);
+              const rest = text.slice(colonIdx + 2);
+              const pipeIdx = rest.indexOf(" | ");
+              const cmd = pipeIdx !== -1 ? rest.slice(0, pipeIdx) : rest;
+              const suffix = pipeIdx !== -1 ? rest.slice(pipeIdx) : "";
+              line.innerHTML = prefix + '<mark class="cmd">' + cmd + "</mark>" + suffix;
+            } else {
+              line.textContent = text;
+            }
+          } else {
+            typeStoryLine(runId, line, text, index === 0 ? 16 : 11);
+          }
         }, delay);
 
-        delay += text.length * (index === 0 ? 16 : 11) + 220;
+        delay += actionClass ? 220 : text.length * (index === 0 ? 16 : 11) + 220;
       });
     }
 
